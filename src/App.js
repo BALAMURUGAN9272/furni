@@ -11,25 +11,27 @@ import Contact from './Components/Contact';
 import Login from './Components/Login';
 import Signin from './Components/Signin';
 import { useState } from 'react';
+import Newlogin from './Components/Newlogin';
 
 
 function App() {
   const [user,setuser] = useState(null)
   return (
       <div>
-        
+               {/* <Route path='/Login' element={<Login user={user} setuser={setuser}/>}/> */}
+
         <BrowserRouter>
         
         <Routes>
         {/* <Route path='/' element={<Home/>}/> */}
-       <Route path='/' element={user?<Home/>:<Navigate to='/Login'/>}/>
+       <Route path='/' element={user?<Home/>:<Navigate to='/Newlogin'/>}/>
 
        <Route path='/shop' element={<Shopsec/>}/>
        <Route path='/about' element={<Aboutus/>}/>
        {/* <Route path='/services' element={<Services/>}/>        */}
        <Route path='/Rblog' element={<Rblog/>}/>
        <Route path='/contact' element={<Contact/>}/>
-       <Route path='/Login' element={<Login user={user} setuser={setuser}/>}/>
+       <Route path='/Newlogin' element={<Newlogin user={user} setuser={setuser}/>}/>
        <Route path='/Signin' element={<Signin/>}/>
         </Routes>
         </BrowserRouter>

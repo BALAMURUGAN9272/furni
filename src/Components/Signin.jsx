@@ -40,7 +40,6 @@ function Signin() {
          if(res.statusText='OK'){
           console.log(res.data)
           setTimeout(() => {
-        
           }, 1000);
          }
       }
